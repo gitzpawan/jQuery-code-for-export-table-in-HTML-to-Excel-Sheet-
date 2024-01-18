@@ -1,0 +1,13 @@
+ $(document).ready(function () {
+        $("#btnExport").click(function () {
+            let table = document.getElementsByTagName("table");
+            console.log(table);
+            debugger;
+            TableToExcel.convert(table[0], {
+                name: `LeadgerCostCenterwise.xlsx`,
+                sheet: {
+                    name: 'Ledger Cost Centerwise'
+                }
+            });
+        });
+    });
